@@ -28,4 +28,5 @@ int main()
     i++;
   }
   printf("Greatest common divisor: %d\n", k);
+  return 0;
 }
