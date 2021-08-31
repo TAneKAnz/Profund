@@ -15,11 +15,15 @@ int main()
   return 0;
 }
 
-int sum(int x){
+int sum(int x)
+{
   int sum = 0;
   while (x > 0)
   {
-    sum += x % 10;
+    if (x % 10 != 0)
+    {
+      sum += x % 10;
+    }
     x /= 10;
   }
   return sum;
