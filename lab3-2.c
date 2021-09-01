@@ -5,7 +5,6 @@ int px();
 int main()
 {
   int n = 10000, total = 100;
-  int arr[total];
   for (int i = 1; i < n; i++)
   {
     int x = px(i);
