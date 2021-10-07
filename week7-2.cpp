@@ -4,29 +4,31 @@ using namespace std;
 int main()
 {
   string word[100];
-  do
+  int n = 0;
+  do{
+    cin>>word[n];
+    n++;
+  }while (word[n-1] != "finished");
+  for (int i = 0; i < n-1; i++)
   {
-    scanf("%s", word[i]);
-  }
-  for (int i = 0; i < n; i++)
-  {
-    for (int j = 0; j < size.word[i]; j++)
+    for (int j = 0; j < word[i].length(); j++)
     {
       if (j == 0)
       {
-        if (word[i][j] < 'A')
+        if (word[i][j] >= 'a')
         {
-          word[i][j] = word[i][j] + 'A' - 'a';
+          word[i][j] = word[i][j] - 32;
         }
       }
       else
       {
-        if (word[i][j] >= 'A')
+        if (word[i][j] < 'a')
         {
-          word[i][j] = word[i][j] + 'a' - 'A';
+          word[i][j] = word[i][j] + 32;
         }
       }
     }
-    printf("%s ", word[i]);
+    cout<<word[i]<<' ';
   }
+  return 0;
 }
